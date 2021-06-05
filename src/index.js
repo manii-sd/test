@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import { Provider } from 'react-redux'
-// import configureStore from './store/configureStore'
+import { Provider } from 'react-redux';
+import App from './components/App';
+import configureStore from './store/configureStore';
 
-import Home from './screens/Home'
+import Home from './screens/Home';
 
-// const store = configureStore()
+ const store = configureStore()
+ 
 
-ReactDOM.render(<Home/>, document.getElementById('root'),);
+render ( <Provider store={store}>
+   <App />
+   </Provider>, 
+   document.getElementById('root'))
+//render(<Home />, document.getElementById('root'));
