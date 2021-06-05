@@ -4,7 +4,7 @@ import todos from './todos'
 
 const todoApp = combineReducers({
   todos,
-  visibilityFilter
+  //visibilityFilter
 })
 
 export default todoApp

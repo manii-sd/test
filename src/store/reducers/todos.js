@@ -4,14 +4,11 @@ const todo = (state, action) => {
   switch (action.type) {
     case ActionTypes.CLICK_BUTTON_WITH_CHECKOX:
       return {
-        id: state.id,
-        text: state.text,
-        completed: false
+        
+        completed: true
       }
     case ActionTypes.CLICK_BUTTON_WITHOUT_CHECKOX:
       return {
-        id: action.id,
-        text: action.text,
         completed: false
       }
 
