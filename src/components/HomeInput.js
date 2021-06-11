@@ -8,7 +8,7 @@ class HomeInput extends PureComponent {
         <button>BOOM</button>
         <br />
         {this.props.a}
-        <input type="checkbox" onChecked={false}></input>
+        <input type="checkbox" value={} onChecked={false}></input>
       </div>
     );
   }

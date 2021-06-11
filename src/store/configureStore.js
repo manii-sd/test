@@ -17,7 +17,6 @@ export default function configureStore(initialState) {
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
 
-    // i dono what should i do -_-
     module.hot.accept('./reducers', () => {
       const nextReducer = require('./reducers').default
       store.replaceReducer(nextReducer)
