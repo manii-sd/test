@@ -12,7 +12,8 @@ export default function configureStore(initialState) {
     initialState,
     applyMiddleware(sagaMiddleware)
   )
-  sagaMiddleware.run(sagas)
+  sagas.map(sagaMiddleware.run)
+
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

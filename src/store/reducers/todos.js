@@ -1,35 +1,25 @@
-import * as ActionTypes from '../../constants/ActionTypes'
+import * as ActionTypes from '../../constants/ActionTypes';
 
-const todo = (state, action) => {
-  switch (action.type) {
-    case ActionTypes.CLICK_BUTTON_WITH_CHECKBOX:
-      return {
-        
-        completed: true
-      }
-    case ActionTypes.CLICK_BUTTON_WITHOUT_CHECKBOX:
-      return {
-        completed: false
-      }
+const initialState = {
+  isCheckBoxChecked: false,
+  a: {
 
-    default:
-      return state
+  },
+  c: {
+    x: 20
   }
-}
-
-const initialState = [ ]
+};
 
 const todos = (state = initialState, action) => {
   switch (action.type) {
     case ActionTypes.CLICK_BUTTON_WITH_CHECKBOX:
-      return 
-      case ActionTypes.CLICK_BUTTON_WITHOUT_CHECKBOX:
-      return [
-      ]
-    
+      return {
+        ...state,
+        isCheckBoxChecked: false
+      }
     default:
-      return state
+      return state;
   }
-}
+};
 
-export default todos
+export default todos;
